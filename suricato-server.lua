@@ -1,3 +1,4 @@
+-- https://discord.gg/tqHWCEZ
 RegisterServerEvent('suricato:nui')
 Tunnel = module("vrp","lib/Tunnel")
 Proxy = module("vrp","lib/Proxy")
