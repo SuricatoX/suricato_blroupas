@@ -9,8 +9,8 @@ Exemplos:
 
 Além disso o script possui dois novos comandos para facilitar a vida do jogador:
 
-  /sroupas - Um vroupas melhorado 300%;
-  /croupas - Um vroupas melhorado 1800%;
+  - /sroupas - Um vroupas melhorado 300%;
+  - /croupas - Um vroupas melhorado 1800%;
 
 A configuração dele foi ensinada no vídeo a seguir:
 
