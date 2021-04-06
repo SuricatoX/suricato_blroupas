@@ -1,3 +1,4 @@
+-- https://discord.gg/tqHWCEZ
 -- Tabela responsável pelo bloqueio de roupas. 
 	-- Quando quiser que a peça roupa seja proibida para todo mundo deixe nil em permission.
 	-- Quando quiser que a peça de roupa seja permitida, mas para uma permissão específica, só igualar a permissão.
