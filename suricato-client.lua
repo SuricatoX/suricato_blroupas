@@ -27,7 +27,7 @@ compvalue = {
 }
 
 RegisterCommand('sroupas', function()
-	if suricato:getperm(permissaosroupas) and c == GetCurrentResourceName() then
+	if suricato:getperm(permissaosroupas) --[[and c == GetCurrentResourceName()]] then
 		local custom = suricatox.getCustomization()
 		local table = ''
 		for k,v in pairs(custom) do
@@ -42,7 +42,7 @@ RegisterCommand('sroupas', function()
 end)
 
 RegisterCommand('croupas', function()
-	if suricato:getperm(permissaocroupas) and c == GetCurrentResourceName() then
+	if suricato:getperm(permissaocroupas) --[[and c == GetCurrentResourceName()]] then
 		local custom = suricatox.getCustomization()
 		local table = ''
 		for k,v in pairs(custom) do
@@ -71,7 +71,7 @@ end)
 CreateThread(function()
 	repeat
 		Wait(1000)
-		if c == GetCurrentResourceName() then
+		--if c == GetCurrentResourceName() then
 			local custom = suricatox.getCustomization()
 			for k,v in pairs(custom) do
 				if blacktoinsert[k] then
@@ -82,7 +82,7 @@ CreateThread(function()
 					end
 				end
 			end
-		end
+		--end
 	until false
 end)
 
