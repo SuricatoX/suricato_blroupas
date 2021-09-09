@@ -47,7 +47,7 @@ RegisterCommand('croupas', function()
 		local table = ''
 		for k,v in pairs(custom) do
 			if compvalue[k] then
-				table = table .. compvalue[k] .. ' ' .. custom[k][1] .. '; '
+				table = table .. compvalue[k] .. ' ' .. custom[k][1] .. ' ' .. custom[k][2] .. '; '
 			end
 		end
 		TriggerServerEvent('suricato:nui','croupas',table)
