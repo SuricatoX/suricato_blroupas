@@ -1,15 +1,12 @@
 -- https://discord.gg/tqHWCEZ
 local Tunnel = module("vrp","lib/Tunnel")
-s = 'surica'
 local Proxy = module("vrp","lib/Proxy")
 suricatox = Proxy.getInterface("vRP")
 suricato = Tunnel.getInterface(GetCurrentResourceName(),suricato)
 suri = {}
-b = ''
 
 
 blacktoinsert = {}
-c = ''
 
 compvalue = {
 	[1] = 'mascara',
@@ -27,7 +24,7 @@ compvalue = {
 }
 
 RegisterCommand('sroupas', function()
-	if suricato:getperm(permissaosroupas) --[[and c == GetCurrentResourceName()]] then
+	if suricato:getperm(permissaosroupas) then
 		local custom = suricatox.getCustomization()
 		local table = ''
 		for k,v in pairs(custom) do
@@ -42,7 +39,7 @@ RegisterCommand('sroupas', function()
 end)
 
 RegisterCommand('croupas', function()
-	if suricato:getperm(permissaocroupas) --[[and c == GetCurrentResourceName()]] then
+	if suricato:getperm(permissaocroupas) then
 		local custom = suricatox.getCustomization()
 		local table = ''
 		for k,v in pairs(custom) do
@@ -57,7 +54,6 @@ RegisterCommand('croupas', function()
 end)
 
 CreateThread(function()
-	b = s .. 'to_'
 	for k,v in pairs(compvalue) do
 		for _,w in pairs(blacklist) do
 			if v == _ then
@@ -65,24 +61,21 @@ CreateThread(function()
 			end
 		end
 	end
-	c = b .. 'blroupas'
 end)
 
 CreateThread(function()
 	repeat
 		Wait(1000)
-		--if c == GetCurrentResourceName() then
-			local custom = suricatox.getCustomization()
-			for k,v in pairs(custom) do
-				if blacktoinsert[k] then
-					for _,w in pairs(blacktoinsert[k]) do
-						if _ == v[1] then
-							applyValues(compvalue[k],k,v,w.permission)
-						end
+		local custom = suricatox.getCustomization()
+		for k,v in pairs(custom) do
+			if blacktoinsert[k] then
+				for _,w in pairs(blacktoinsert[k]) do
+					if _ == v[1] then
+						applyValues(compvalue[k],k,v,w.permission)
 					end
 				end
 			end
-		--end
+		end
 	until false
 end)
 
